@@ -1,2 +1,5 @@
 # macOS
 .DS_Store
+
+# python env
+*/env/
