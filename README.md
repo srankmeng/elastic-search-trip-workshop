@@ -8,6 +8,11 @@ $ docker compose ps
 $ docker compose log --follow
 ```
 
+## open on browser
+```
+http://localhost:5601
+```
+
 ## Example of data
 ```
 POST materials/_doc
