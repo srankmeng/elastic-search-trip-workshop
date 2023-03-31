@@ -35,8 +35,16 @@ def indexer():
 
   index_name = OPENSEARCH_INDEX_NAME
   number_of_shards = 1
+  
 
-  os_params = {}
+  os_params = {
+    "settings": {"index": {
+      "number_of_shards": number_of_shards,
+    }},
+    "mappings": {
+    }
+  }
+  
   if os_client.indices.exists(index=index_name):
     os_client.indices.delete(index=index_name)
   os_client.indices.create(index_name, body=os_params)
